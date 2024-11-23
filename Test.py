@@ -68,12 +68,23 @@ def word_comparison(comp,test):
 
 
 def get_groups(word_list,a_sol):
-    groupings = []
-    grp_list = []
-    grps = pd.DataFrame()
-    grp_no = 0 
-    wrd_lst = []
+
+    """
+    takes a list of words and compares it with an assumed solution word. It then groups the words based on the unique coloring response and outputs as a dictionary. Each key is the unique color grouping, and the values are the list of words corresponding to that color grouping.
+
+    inputs:
+
+    word_list:  list of words to be grouped
+    a_sol: assumed solution (assigned outside the function)
+
+    outputs:
+
+    grp_dict: dictionary with groupings and associated words. It also contains the assumed solution as an entry.
+    
+    """
+
     grp_dict = {}
+    grp_dict['assumed solution'] = a_sol
     for word in word_list:
         
         group = word_comparison(a_sol,word) # get the grouping between the word and assumed solution
