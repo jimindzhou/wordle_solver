@@ -1,0 +1,39 @@
+solvers:
+  mcts_baseline:
+    type: mcts
+    initial_guesses: 
+      - slate
+      - crane
+      - slant
+      - trace
+      - crate
+      - carte
+    exploration_constant: 10.0
+    max_simulations: 50
+    n_games: 500
+    word_file: valid_wordle_words.txt
+
+  mcts_fast:
+    type: mcts
+    initial_guesses:
+      - slate
+      - carte
+    exploration_constant: 5.0
+    max_simulations: 10
+    n_games: 75
+    word_file: wordle_words.txt
+
+  llm_enhanced:
+    type: llm_mcts
+    initial_guesses:
+      - carte
+    exploration_constant: 8.0
+    max_simulations: 15
+    n_games: 2
+    word_file: wordle_words.txt
+    llm_config:
+      api_key: api.key
+      model: gpt-3.5-turbo
+      temperature: 0.3
+      suggestion_weight: 0.3
+      max_valid_words: 50
