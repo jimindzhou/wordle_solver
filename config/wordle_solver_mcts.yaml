@@ -1,0 +1,14 @@
+solvers:
+  mcts_baseline:
+    type: mcts
+    initial_guesses: 
+      - slate
+      - crane
+      - slant
+      - trace
+      - crate
+      - carte
+    exploration_constant: 10.0
+    max_simulations: 50
+    n_games: 500
+    word_file: valid-wordle-words.txt

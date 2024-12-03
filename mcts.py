@@ -123,20 +123,16 @@ class WordleMCTS:
             used_patterns.add(state.current_guess)  # Avoid repeating same guess
             
         for word in self.word_list:
-            # Skip if we've tried this word
             if word in used_patterns:
                 continue
                 
-            # Check green letters
             if not all(word[pos] == letter 
                       for pos, letter in state.green_letters.items()):
                 continue
                 
-            # Check yellow letters
             if not all(letter in word for letter in state.yellow_letters):
                 continue
                 
-            # Enhanced black letter checking
             skip_word = False
             for pos, letter in enumerate(word):
                 if letter in state.black_letters:
@@ -164,13 +160,9 @@ class WordleMCTS:
         freq_score = sum(self.letter_frequencies[letter] for letter in unique_letters)
         pos_score = sum(self.position_frequencies.get((letter, pos), 0) 
                        for pos, letter in enumerate(word))
-        
-        # Known information score
         green_score = sum(1.0 for pos, letter in enumerate(word) 
                          if pos in state.green_letters and state.green_letters[pos] == letter)
         yellow_score = sum(0.5 for letter in word if letter in state.yellow_letters)
-        
-        # Pattern diversity bonus
         pattern_diversity = len(unique_letters) / 5.0  # Reward words with unique letters
         
         # Combine scores with weights

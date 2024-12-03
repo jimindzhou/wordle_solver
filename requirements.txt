@@ -1,0 +1,7 @@
+# Core dependencies
+numpy>=1.21.0
+tqdm>=4.65.0
+PyYAML>=6.0.1
+
+# OpenAI API (for LLM-enhanced solver)
+openai>=1.3.0
