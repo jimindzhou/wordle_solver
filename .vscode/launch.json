@@ -4,6 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "name": "Debug Wordle",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/helper_funcs.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+            },
+            "python": "${command:python.interpreterPath}",
+            "cwd": "${workspaceFolder}",
+        },
         {
             "name": "Debug Wordle MCTS",
             "type": "python",

@@ -1,5 +1,4 @@
 #%% import necessary functions and libraries
-
 import numpy as np
 import scipy as sp 
 import random
@@ -169,7 +168,7 @@ def get_dict_stats(group_dict):
     return no_groups, max_length
 
 # # Unit tests for dictionary stats function
-# no_groups1, max_length1 = get_dict_stats(grp_dict1)
+#no_groups1, max_length1 = get_dict_stats(grp_dict1)
 # no_groups2, max_length2 = get_dict_stats(grp_dict2)
 # no_groups3, max_length3 = get_dict_stats(grp_dict3)
 # no_groups4, max_length4 = get_dict_stats(grp_dict4)
@@ -263,10 +262,10 @@ def state_transition(word_list, solution, guess):
     return new_word_list   
 
 # # Unit test for the state transition function
-# word_list4 = ["float", "bloat", "gloat", "sloan", "vegan"]
-# solution4 = "bloat"
-# guess4 = "gloat"
-# new_word_list4 = state_transition(word_list4, solution4, guess4)
+#word_list4 = ["float", "bloat", "gloat", "sloan", "vegan"]
+#solution4 = "bloat"
+#guess4 = "gloat"
+#new_word_list4 = state_transition(word_list4, solution4, guess4)
 # solution5 = "float"
 # guess5 = "sloan"
 # new_word_list5 = state_transition(word_list4, solution5, guess5)
