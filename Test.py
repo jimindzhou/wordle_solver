@@ -7,6 +7,7 @@ from collections import defaultdict, Counter
 from typing import List, Dict, Any, Tuple
 import pandas as pd
 
+
 def print_colored_square(color):
     colors = {
         'red': '\033[41m',    # red background
@@ -100,11 +101,12 @@ def get_groups(word_list,a_sol):
 
 #%% import the wordlist
 
-with open('valid-wordle-words.txt','r') as file:
+with open(r'jimindzhou/valid-wordle-words.txt','r') as file:
     wordlist = [line.strip() for line in file]
 
 
 #%% test on toy subset
+
 random.seed(12)
 rand_idx = [random.randint(1,len(wordlist)) for _ in range(10)]
 
