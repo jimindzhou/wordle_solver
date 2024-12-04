@@ -247,39 +247,38 @@ def state_transition(word_list, solution, guess):
     outputs:
 
     new_word_list: updated list of valid words after taking into account the color patern information given by the game
+    obs_group: list of color observations for the given guess-solution pair
     
     """
     
     new_word_list = []
-    if guess == solution:
-        return new_word_list
     obs_group = word_comparison(solution, guess)
+    if guess != solution:     
+        for word in word_list:         
+            group = word_comparison(word, guess)
+            if group == obs_group:
+                new_word_list.append(word)    
 
-    for word in word_list:         
-        group = word_comparison(word, guess)
-        if group == obs_group:
-            new_word_list.append(word)    
-
-    return new_word_list   
+    return new_word_list, obs_group  
 
 # # Unit test for the state transition function
 # word_list4 = ["float", "bloat", "gloat", "sloan", "vegan"]
 # solution4 = "bloat"
 # guess4 = "gloat"
-# new_word_list4 = state_transition(word_list4, solution4, guess4)
+# new_word_list4, obs_group4 = state_transition(word_list4, solution4, guess4)
 # solution5 = "float"
 # guess5 = "sloan"
-# new_word_list5 = state_transition(word_list4, solution5, guess5)
+# new_word_list5, obs_group5 = state_transition(word_list4, solution5, guess5)
 # solution6 = "vegan"
 # guess6 = "bloat"
-# new_word_list6 = state_transition(word_list4, solution6, guess6)
+# new_word_list6, obs_group6 = state_transition(word_list4, solution6, guess6)
 # word_list5 = ["float", "bloat"]
 # solution7 = "bloat"
 # guess7 = "float"
-# new_word_list7 = state_transition(word_list5, solution7, guess7)
+# new_word_list7, obs_group7 = state_transition(word_list5, solution7, guess7)
 # solution8 = "bloat"
 # guess8 = "bloat"
-# new_word_list8 = state_transition(word_list5, solution8, guess8)
+# new_word_list8, obs_group8 = state_transition(word_list5, solution8, guess8)
 
 def compute_score(trajectory):
     """
