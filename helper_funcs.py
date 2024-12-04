@@ -181,14 +181,15 @@ def create_dict_list(word_list):
 
     inputs:
 
-    word_list:  list of valid words remaining
-    
+    word_list:  list of valid words remaining    
 
     outputs:
 
     dict_list: list of dictionaries where each entry is associated with a word from the word_list being chosen as the next guess.
                the individual dictionaries contain all possible observations from the given guess (keys representing the color patern)
-               and the set of words that would be contained in the new state associated with the given observation (values)
+               and the set of words that would be contained in the new state associated with the given observation (values).
+               The entry associated with the current guess being the solution (patern of 5 green tiles) will be empty, signifying that
+               the game ended
     stat_list: list containing the number of dictionaries and the size of the largest dictionary associated with each potential guess
     tran_list: list containing the probability of transitioning to each possible future state from a given guess
     prob_list: probability of choosing a word as the next guess (action), considering the heuristic: [Number of Groups / Size of Largest Group]
@@ -205,7 +206,7 @@ def create_dict_list(word_list):
 
         for sol in word_list:
             group = word_comparison(sol, guess)
-            group_key = tuple(group)  # Convert to tuple to make it hashable
+            group_key = tuple(group)
             if group_key not in grp_dict:
                 grp_dict[group_key] = []
             grp_dict[group_key].append(sol)
@@ -216,6 +217,7 @@ def create_dict_list(word_list):
             tran_dict[key].append(len(grp_dict[key]) / nword)
 
         no_groups, max_length = get_dict_stats(grp_dict)
+        grp_dict[('green', 'green', 'green', 'green', 'green')] = []
 
         dict_list.append(grp_dict)
         stat_list.append([no_groups, max_length])
@@ -230,3 +232,99 @@ def create_dict_list(word_list):
 # # Unit tests for dictionary list creation
 # word_list3 = ["float", "bloat", "gloat", "sloan", "vegan"]
 # dict_list, stat_list, tran_list, prob_list = create_dict_list(word_list3)
+
+def state_transition(word_list, solution, guess):
+    """
+    takes the current guess and compares it against the actual solution (for the game simulator) and then trims down the
+    list of remaining possible solutions (next state), according to the color patern observation given by the game
+
+    inputs:
+
+    word_list:  list of valid words remaining before the guess
+    solution: mystery word which is the solution to the game
+    guess: current guess (action) taken    
+
+    outputs:
+
+    new_word_list: updated list of valid words after taking into account the color patern information given by the game
+    
+    """
+    
+    new_word_list = []
+    if guess == solution:
+        return new_word_list
+    obs_group = word_comparison(solution, guess)
+
+    for word in word_list:         
+        group = word_comparison(word, guess)
+        if group == obs_group:
+            new_word_list.append(word)    
+
+    return new_word_list   
+
+# # Unit test for the state transition function
+# word_list4 = ["float", "bloat", "gloat", "sloan", "vegan"]
+# solution4 = "bloat"
+# guess4 = "gloat"
+# new_word_list4 = state_transition(word_list4, solution4, guess4)
+# solution5 = "float"
+# guess5 = "sloan"
+# new_word_list5 = state_transition(word_list4, solution5, guess5)
+# solution6 = "vegan"
+# guess6 = "bloat"
+# new_word_list6 = state_transition(word_list4, solution6, guess6)
+# word_list5 = ["float", "bloat"]
+# solution7 = "bloat"
+# guess7 = "float"
+# new_word_list7 = state_transition(word_list5, solution7, guess7)
+# solution8 = "bloat"
+# guess8 = "bloat"
+# new_word_list8 = state_transition(word_list5, solution8, guess8)
+
+def compute_score(trajectory):
+    """
+    takes a trajectory obtained by a Monte Carlo simulation and evaluates its score. A trajectory consists of a list
+    states (word list) traversed by a sequence of actions. The score returned will be associated with a state-action
+    pair, corresponding to the state from which the trajectory was rolled out and the first action taken in that state.
+    The total score of that state-action pair R(s,a) is computed as the sum of the reward obtained at each step of the
+    trajectory. For the states before the terminal state (which will be empty if we have found the solution, or non-empty
+    if we exhausted the available guesses without finding a solution), we penalize the size of the state and the number of
+    guesses it has taken us to reach that state. For the terminal state, we either apply a penalty for failing to find the 
+    solution or a reward for doing so. The reward computation is shown below, where alpha and beta are hyperparameters.
+    R(Si, Ai) = -[(|s|- 1) + alpha*(i-1)] + beta(if |St| == 1) - beta(if |St| > 1)
+
+    Obs.: a trajectory always has n+1 states, where n is the number of guesses actually taken (max n = 6, max states = 7).
+          also, we do not need to evaluate the score associated with the first state, since it will be identical for all
+          trajectories taken from that state.
+
+    inputs:
+
+    trajectory:  list of the sequence of states generated by a single Monte Carlo simulation
+
+    outputs:
+
+    score: utility of the action taken at the initial state that lead to the given trajectory rollout
+    
+    """
+    alpha = 1000
+    beta = 10000
+    nstates = len(trajectory)
+    score = 0.0
+    for guess, state in enumerate(trajectory):
+        if guess == 0:
+            continue
+        if guess == (nstates - 1):
+            if len(state) == 0:
+                score += beta
+            else:
+                score -= beta
+        else:
+            score -= ((len(state) - 1) + alpha * guess)
+
+    return score
+
+# # Unit test for score function
+# trajectory1 = [["a", "b", "c", "d"], ["a", "b", "d"], ["d"], []]
+# score1 = compute_score(trajectory1)
+# trajectory2 = [["a", "b", "c", "d"], ["a", "b", "d"], ["b", "d"], ["d"]]
+# score2 = compute_score(trajectory2)
