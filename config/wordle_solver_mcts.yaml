@@ -8,7 +8,8 @@ solvers:
       - trace
       - crate
       - carte
-    exploration_constant: 10.0
-    max_simulations: 100
-    n_games: 50
+    alpha: 1000.0
+    beta: 10000.0
+    max_simulations: 20 # Maximum number of MC simulations to run at each depth
+    n_games: 10 # Number of games to play
     word_file: valid-wordle-words.txt
