@@ -119,12 +119,6 @@ def main():
         print(f"Success rate: {results['success_rate']:.1f}%")
         print(f"Average attempts: {results['avg_attempts']:.2f} ± {results['std_attempts']:.2f}")
         
-        print("\nInitial guess performance:")
-        for guess, stats in results['initial_guess_stats'].items():
-            if stats['uses'] > 0:
-                success_rate = (stats['successes'] / stats['uses']) * 100
-                print(f"{guess}: {success_rate:.1f}% success rate ({stats['successes']}/{stats['uses']} games)")
-        
         # Save results
         results_file = f"results_{args.solver}.yaml"
         with open(results_file, 'w') as f:
