@@ -74,7 +74,7 @@ def run_evaluation(solver: WordleMCTS, n_games: int) -> Dict[str, float]:
         if result > 0:
             wins += 1
             total_attempts += result
-            print(f"Won in {result} attempts")
+            print(f" Won in {result} attempts")
         else:
             total_attempts += 6
             print("Failed to solve")

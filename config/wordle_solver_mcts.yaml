@@ -9,6 +9,6 @@ solvers:
       - crate
       - carte
     exploration_constant: 10.0
-    max_simulations: 50
-    n_games: 500
+    max_simulations: 100
+    n_games: 50
     word_file: valid-wordle-words.txt
