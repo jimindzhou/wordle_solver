@@ -186,7 +186,7 @@ class WordleMCSolver:
             bool: True if solution was found, False otherwise
         """
         self.current_depth += 1
-        new_word_list = state_transition(self.current_word_list, solution, guess)
+        new_word_list, _ = state_transition(self.current_word_list, solution, guess)
         self.current_word_list = new_word_list
         self.trajectory_history.append(new_word_list)
         
