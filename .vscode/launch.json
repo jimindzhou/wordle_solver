@@ -9,7 +9,7 @@
             "name": "Debug Wordle",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/helper_funcs.py",
+            "program": "${workspaceFolder}/wordle_solver_main.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
