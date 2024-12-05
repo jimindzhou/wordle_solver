@@ -9,7 +9,13 @@
             "name": "Debug Wordle",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/wordle_solver_main.py",
+            "program": "${workspaceFolder}/wordle_main.py",
+            "args": [
+                "--config",
+                "./config/wordle_solver_mcts.yaml",
+                "--solver",
+                "mcts_baseline"
+            ],
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {

@@ -59,7 +59,6 @@ def generate_mc_trajectory(word_list: List[str],
     
     return trajectory, first_action
 
-
 def run_monte_carlo(word_list: List[str], n_simulations: int, depth: int) -> str:
     """
     Runs multiple Monte Carlo simulations to determine the best next guess.

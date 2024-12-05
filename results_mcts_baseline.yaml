@@ -1,0 +1,4401 @@
+avg_attempts: !!python/object/apply:numpy.core.multiarray.scalar
+- &id001 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - false
+  - true
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  FK5H4XoUCkA=
+game_histories:
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - askew
+  - bagel
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABnAAAAZQAAAGwAAAA=
+  states:
+  - 6
+  - 12
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - album
+  - aging
+  - awash
+  - assay
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHMAAABzAAAAYQAAAHkAAAA=
+  states:
+  - 6
+  - 39
+  - 13
+  - 2
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - anger
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAABnAAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 5
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - basil
+  - banjo
+  - baggy
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABnAAAAZwAAAHkAAAA=
+  states:
+  - 6
+  - 11
+  - 4
+  - 2
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - bayou
+  - adult
+  - awful
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHcAAABmAAAAdQAAAGwAAAA=
+  states:
+  - 6
+  - 43
+  - 3
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - align
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABpAAAAZwAAAG4AAAA=
+  states:
+  - 6
+  - 2
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - basal
+  - annul
+  - anvil
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAAB2AAAAaQAAAGwAAAA=
+  states:
+  - 6
+  - 46
+  - 4
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - askew
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHMAAABrAAAAZQAAAHcAAAA=
+  states:
+  - 6
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - adage
+  - agape
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABhAAAAcAAAAGUAAAA=
+  states:
+  - 6
+  - 5
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - alpha
+  - axiom
+  - avoid
+  - audio
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHUAAABkAAAAaQAAAG8AAAA=
+  states:
+  - 6
+  - 39
+  - 12
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - actor
+  - attic
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAAB0AAAAaQAAAGMAAAA=
+  states:
+  - 6
+  - 9
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - amuse
+  - amiss
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABpAAAAcwAAAHMAAAA=
+  states:
+  - 6
+  - 11
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - acrid
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGMAAAByAAAAaQAAAGQAAAA=
+  states:
+  - 6
+  - 2
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - afire
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGYAAABpAAAAcgAAAGUAAAA=
+  states:
+  - 6
+  - 5
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - allay
+  - badly
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABkAAAAbAAAAHkAAAA=
+  states:
+  - 6
+  - 43
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - axiom
+  - abode
+  - awoke
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHcAAABvAAAAawAAAGUAAAA=
+  states:
+  - 6
+  - 35
+  - 6
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - awoke
+  - adobe
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAABvAAAAYgAAAGUAAAA=
+  states:
+  - 6
+  - 22
+  - 5
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - awash
+  - affix
+  - align
+  - aping
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHAAAABpAAAAbgAAAGcAAAA=
+  states:
+  - 6
+  - 39
+  - 23
+  - 4
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - azure
+  - arise
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHIAAABpAAAAcwAAAGUAAAA=
+  states:
+  - 6
+  - 7
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - aping
+  - admin
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAABtAAAAaQAAAG4AAAA=
+  states:
+  - 6
+  - 46
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - alibi
+  - axial
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHgAAABpAAAAYQAAAGwAAAA=
+  states:
+  - 6
+  - 39
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - adage
+  - awake
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHcAAABhAAAAawAAAGUAAAA=
+  states:
+  - 6
+  - 26
+  - 3
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - actor
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGMAAAB0AAAAbwAAAHIAAAA=
+  states:
+  - 6
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - aloud
+  - alibi
+  - allay
+  - alpha
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABwAAAAaAAAAGEAAAA=
+  states:
+  - 6
+  - 10
+  - 4
+  - 2
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - amber
+  - anger
+  - aider
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGkAAABkAAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 5
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - altar
+  - aorta
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG8AAAByAAAAdAAAAGEAAAA=
+  states:
+  - 6
+  - 3
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - asian
+  - ashen
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHMAAABoAAAAZQAAAG4AAAA=
+  states:
+  - 6
+  - 4
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - asset
+  - adept
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAABlAAAAcAAAAHQAAAA=
+  states:
+  - 6
+  - 3
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - align
+  - axion
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHgAAABpAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 14
+  - 3
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - arbor
+  - armor
+  - ardor
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHIAAABkAAAAbwAAAHIAAAA=
+  states:
+  - 6
+  - 7
+  - 2
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - awful
+  - annoy
+  - among
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABvAAAAbgAAAGcAAAA=
+  states:
+  - 6
+  - 46
+  - 15
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - aunty
+  - amity
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABpAAAAdAAAAHkAAAA=
+  states:
+  - 6
+  - 3
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - bathe
+  - atone
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAABvAAAAbgAAAGUAAAA=
+  states:
+  - 6
+  - 2
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - agape
+  - abase
+  - awake
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHcAAABhAAAAawAAAGUAAAA=
+  states:
+  - 6
+  - 5
+  - 3
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - avian
+  - anime
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAABpAAAAbQAAAGUAAAA=
+  states:
+  - 6
+  - 16
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - aunty
+  - amity
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABpAAAAdAAAAHkAAAA=
+  states:
+  - 6
+  - 3
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - alter
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAAB0AAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 4
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - align
+  - alpha
+  - aloof
+  - album
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABiAAAAdQAAAG0AAAA=
+  states:
+  - 6
+  - 10
+  - 7
+  - 5
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - axion
+  - banjo
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABuAAAAagAAAG8AAAA=
+  states:
+  - 6
+  - 14
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - bayou
+  - affix
+  - aphid
+  - anvil
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAAB2AAAAaQAAAGwAAAA=
+  states:
+  - 6
+  - 46
+  - 12
+  - 3
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - arbor
+  - badge
+  - baggy
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABnAAAAZwAAAHkAAAA=
+  states:
+  - 6
+  - 35
+  - 3
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - baron
+  - augur
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHUAAABnAAAAdQAAAHIAAAA=
+  states:
+  - 6
+  - 7
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - atone
+  - bathe
+  - baste
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABzAAAAdAAAAGUAAAA=
+  states:
+  - 6
+  - 3
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - alert
+  - alter
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAAB0AAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 4
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - abhor
+  - baron
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAAByAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 7
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - amaze
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABhAAAAegAAAGUAAAA=
+  states:
+  - 6
+  - 7
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - badly
+  - aphid
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHAAAABoAAAAaQAAAGQAAAA=
+  states:
+  - 6
+  - 46
+  - 3
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - adorn
+  - apron
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHAAAAByAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 33
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - angry
+  - annoy
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAABuAAAAbwAAAHkAAAA=
+  states:
+  - 6
+  - 33
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - align
+  - baton
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAAB0AAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 14
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - aroma
+  - array
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHIAAAByAAAAYQAAAHkAAAA=
+  states:
+  - 6
+  - 7
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - abase
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABhAAAAcwAAAGUAAAA=
+  states:
+  - 6
+  - 3
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - agent
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABlAAAAbgAAAHQAAAA=
+  states:
+  - 6
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - arbor
+  - armor
+  - ardor
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHIAAABkAAAAbwAAAHIAAAA=
+  states:
+  - 6
+  - 7
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - angry
+  - baron
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAAByAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 16
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - apple
+  - amble
+  - agile
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABpAAAAbAAAAGUAAAA=
+  states:
+  - 6
+  - 6
+  - 4
+  - 3
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - agile
+  - ample
+  - apple
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHAAAABwAAAAbAAAAGUAAAA=
+  states:
+  - 6
+  - 15
+  - 3
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - aback
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABhAAAAYwAAAGsAAAA=
+  states:
+  - 6
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - ahead
+  - asset
+  - alley
+  - abbey
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABiAAAAZQAAAHkAAAA=
+  states:
+  - 6
+  - 8
+  - 4
+  - 2
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - angst
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAABnAAAAcwAAAHQAAAA=
+  states:
+  - 6
+  - 3
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - annex
+  - amber
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABiAAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 10
+  - 3
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - badge
+  - abode
+  - abide
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABpAAAAZAAAAGUAAAA=
+  states:
+  - 6
+  - 14
+  - 3
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - adapt
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAABhAAAAcAAAAHQAAAA=
+  states:
+  - 6
+  - 2
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - attic
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAAB0AAAAaQAAAGMAAAA=
+  states:
+  - 6
+  - 3
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - armor
+  - baker
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABrAAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 35
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - basin
+  - arson
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHIAAABzAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 4
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - apron
+  - annoy
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG4AAABuAAAAbwAAAHkAAAA=
+  states:
+  - 6
+  - 33
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - alone
+  - atone
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAABvAAAAbgAAAGUAAAA=
+  states:
+  - 6
+  - 2
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - arbor
+  - adorn
+  - agora
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABvAAAAcgAAAGEAAAA=
+  states:
+  - 6
+  - 12
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - adult
+  - atoll
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAABvAAAAbAAAAGwAAAA=
+  states:
+  - 6
+  - 13
+  - 2
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - aglow
+  - balmy
+  - baler
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABsAAAAZQAAAHIAAAA=
+  states:
+  - 6
+  - 15
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - agora
+  - altar
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAAB0AAAAYQAAAHIAAAA=
+  states:
+  - 6
+  - 6
+  - 1
+  success: true
+- attempts: 5
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - amuse
+  - above
+  - agile
+  - awake
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHcAAABhAAAAawAAAGUAAAA=
+  states:
+  - 6
+  - 26
+  - 17
+  - 9
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - adorn
+  - audio
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHUAAABkAAAAaQAAAG8AAAA=
+  states:
+  - 6
+  - 33
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - aglow
+  - apply
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHAAAABwAAAAbAAAAHkAAAA=
+  states:
+  - 6
+  - 15
+  - 6
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - alike
+  - abide
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABpAAAAZAAAAGUAAAA=
+  states:
+  - 6
+  - 19
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - arose
+  - amuse
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAAB1AAAAcwAAAGUAAAA=
+  states:
+  - 6
+  - 5
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - agora
+  - augur
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHUAAABnAAAAdQAAAHIAAAA=
+  states:
+  - 6
+  - 12
+  - 1
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - adult
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAAB1AAAAbAAAAHQAAAA=
+  states:
+  - 6
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - arena
+  - among
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAG0AAABvAAAAbgAAAGcAAAA=
+  states:
+  - 6
+  - 6
+  - 4
+  success: true
+- attempts: 2
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - aback
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABhAAAAYwAAAGsAAAA=
+  states:
+  - 6
+  - 1
+  success: true
+- attempts: 6
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - agape
+  - amaze
+  - awake
+  - abase
+  - abate
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABhAAAAdAAAAGUAAAA=
+  states:
+  - 6
+  - 7
+  - 4
+  - 3
+  - 2
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - alpha
+  - baggy
+  - basis
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABzAAAAaQAAAHMAAAA=
+  states:
+  - 6
+  - 43
+  - 5
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - audio
+  - aglow
+  - aloof
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABvAAAAbwAAAGYAAAA=
+  states:
+  - 6
+  - 46
+  - 8
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - amity
+  - admit
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGQAAABtAAAAaQAAAHQAAAA=
+  states:
+  - 6
+  - 43
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - attic
+  - afoot
+  - abort
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAABvAAAAcgAAAHQAAAA=
+  states:
+  - 6
+  - 12
+  - 5
+  - 3
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - align
+  - basis
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABzAAAAaQAAAHMAAAA=
+  states:
+  - 6
+  - 46
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - agony
+  - abyss
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAAB5AAAAcwAAAHMAAAA=
+  states:
+  - 6
+  - 46
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAbgAAAGUAAAA=
+  - aphid
+  - amiss
+  - axial
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHgAAABpAAAAYQAAAGwAAAA=
+  states:
+  - 6
+  - 43
+  - 5
+  - 2
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - apnea
+  - avian
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHYAAABpAAAAYQAAAG4AAAA=
+  states:
+  - 6
+  - 16
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAHIAAABhAAAAdAAAAGUAAAA=
+  - agora
+  - augur
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHUAAABnAAAAdQAAAHIAAAA=
+  states:
+  - 6
+  - 7
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - audio
+  - arbor
+  - agora
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABvAAAAcgAAAGEAAAA=
+  states:
+  - 6
+  - 35
+  - 8
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      dAAAAHIAAABhAAAAYwAAAGUAAAA=
+  - amply
+  - album
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABiAAAAdQAAAG0AAAA=
+  states:
+  - 6
+  - 46
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - antic
+  - attic
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHQAAAB0AAAAaQAAAGMAAAA=
+  states:
+  - 6
+  - 3
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - asian
+  - abyss
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGIAAAB5AAAAcwAAAHMAAAA=
+  states:
+  - 6
+  - 39
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - agape
+  - agile
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGcAAABpAAAAbAAAAGUAAAA=
+  states:
+  - 6
+  - 26
+  - 1
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAdAAAAGUAAAA=
+  - aging
+  - avian
+  - axion
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAHgAAABpAAAAbwAAAG4AAAA=
+  states:
+  - 6
+  - 33
+  - 2
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      YwAAAGEAAAByAAAAdAAAAGUAAAA=
+  - award
+  - alarm
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABhAAAAcgAAAG0AAAA=
+  states:
+  - 6
+  - 12
+  - 1
+  success: true
+- attempts: 3
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - arose
+  - basic
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YgAAAGEAAABzAAAAaQAAAGMAAAA=
+  states:
+  - 6
+  - 11
+  - 2
+  success: true
+- attempts: 4
+  guesses:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - !!python/object/apply:numpy.dtype
+      args:
+      - U5
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - 20
+      - 4
+      - 8
+    - !!binary |
+      cwAAAGwAAABhAAAAbgAAAHQAAAA=
+  - alibi
+  - allow
+  - aloof
+  solution: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U5
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 20
+    - 4
+    - 8
+  - !!binary |
+    YQAAAGwAAABvAAAAbwAAAGYAAAA=
+  states:
+  - 6
+  - 12
+  - 8
+  - 1
+  success: true
+guess_distribution:
+  2: 16
+  3: 52
+  4: 23
+  5: 8
+  6: 1
+initial_guess_stats:
+  carte:
+    successes: 0
+    uses: 15
+  crane:
+    successes: 0
+    uses: 15
+  crate:
+    successes: 0
+    uses: 17
+  slant:
+    successes: 0
+    uses: 21
+  slate:
+    successes: 0
+    uses: 16
+  trace:
+    successes: 0
+    uses: 16
+n_games: 100
+std_attempts: !!python/object/apply:numpy.core.multiarray.scalar
+- *id001
+- !!binary |
+  Pddmeb5i6z8=
+success_rate: 100.0

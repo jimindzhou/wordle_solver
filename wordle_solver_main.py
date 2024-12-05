@@ -2,7 +2,9 @@ from mc_traj_generator import run_monte_carlo
 from helper_funcs import state_transition
 from typing import List, Dict, Tuple, Any
 
-def play_wordle(solution: str, word_list: List[str], n_simulations: int = 100) -> Tuple[bool, int]:
+def play_wordle(solution: str,
+                 word_list: List[str],
+                 n_simulations: int = 100) -> Tuple[bool, int]:
     """
     Plays a complete Wordle game using Monte Carlo simulation.
     
@@ -24,13 +26,12 @@ def play_wordle(solution: str, word_list: List[str], n_simulations: int = 100) -
         if guess == solution:
             return True, depth + 1
             
-        # Update word list based on the game's response
-        current_words = state_transition(current_words, solution, guess)
-        
-        # If no valid words left or only one word left
+        current_words = state_transition(current_words, solution, guess) # Update word list based on the game's response
         if not current_words:
+            # If no valid words left, return False
             return False, depth + 1
         if len(current_words) == 1 and current_words[0] == solution:
+            # If only the solution word is left, return True
             return True, depth + 2
             
         depth += 1
