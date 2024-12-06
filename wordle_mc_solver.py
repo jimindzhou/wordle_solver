@@ -6,6 +6,7 @@ import numpy as np
 import random
 from pathlib import Path
 from tqdm import tqdm
+import concurrent.futures
 
 class WordleMCSolver(WordleSolverBase):
     """Monte Carlo Tree Search solver for Wordle"""
@@ -106,21 +107,40 @@ class WordleMCSolver(WordleSolverBase):
                        disable=not self.debug,  # Disable tqdm when debug is False
                        leave=False) if self.debug else range(self.n_simulations)
         
-        for _ in iterator:
-            trajectory, first_action = self._generate_trajectory()
-            score = self._compute_score(trajectory)
-            action_scores[first_action].append(score)
-            
-            # Only update postfix if debug is True and using tqdm
-            if self.debug:
-                if action_scores:
-                    current_best_score = max(
-                        np.mean(scores) for scores in action_scores.values()
-                    )
-                    iterator.set_postfix({
-                        'words': len(self.current_word_list),
-                        'best_score': f"{current_best_score:.1f}"
-                    })
+        if len(self.current_word_list) < 500:
+        # Perform multiple MC simulations 
+            for _ in iterator:
+                trajectory, first_action = self._generate_trajectory()
+                score = self._compute_score(trajectory)
+                action_scores[first_action].append(score)
+                
+                # Only update postfix if debug is True and using tqdm
+                if self.debug:
+                    if action_scores:
+                        current_best_score = max(
+                            np.mean(scores) for scores in action_scores.values()
+                        )
+                        iterator.set_postfix({
+                            'words': len(self.current_word_list),
+                            'best_score': f"{current_best_score:.1f}"
+                        })
+
+        else:
+            # Perform multiple MC simulations
+            mcruns = [self._generate_trajectory] * self.n_simulations
+            with concurrent.futures.ProcessPoolExecutor(max_workers = self.n_simulations) as executor:
+                futures = [executor.submit(func) for func in mcruns]  
+                # # Display the number of active processes              
+                # while any(future.running() for future in futures):                    
+                #     active_processes = multiprocessing.active_children()
+                #     print(f"Active processes: {len(active_processes)}")
+                #     time.sleep(0.5)  # Check every 500ms
+                results = [future.result() for future in futures]
+                
+
+            for trajectory, first_action in results:
+                score = self._compute_score(trajectory)
+                action_scores[first_action].append(score)
         
         # Calculate average scores and return best guess
         avg_scores = {
