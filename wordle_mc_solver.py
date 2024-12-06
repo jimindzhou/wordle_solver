@@ -7,6 +7,7 @@ import random
 from pathlib import Path
 from tqdm import tqdm
 import concurrent.futures
+import multiprocessing
 
 class WordleMCSolver(WordleSolverBase):
     """Monte Carlo Tree Search solver for Wordle"""
@@ -128,16 +129,10 @@ class WordleMCSolver(WordleSolverBase):
         else:
             # Perform multiple MC simulations
             mcruns = [self._generate_trajectory] * self.n_simulations
-            with concurrent.futures.ProcessPoolExecutor(max_workers = self.n_simulations) as executor:
-                futures = [executor.submit(func) for func in mcruns]  
-                # # Display the number of active processes              
-                # while any(future.running() for future in futures):                    
-                #     active_processes = multiprocessing.active_children()
-                #     print(f"Active processes: {len(active_processes)}")
-                #     time.sleep(0.5)  # Check every 500ms
-                results = [future.result() for future in futures]
+            n_workers = min(multiprocessing.cpu_count(), 16)  # Optimal number of processes
+            with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
+                results = list(executor.map(lambda _: self._generate_trajectory(), range(self.n_simulations)))
                 
-
             for trajectory, first_action in results:
                 score = self._compute_score(trajectory)
                 action_scores[first_action].append(score)
