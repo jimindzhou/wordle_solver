@@ -185,8 +185,9 @@ def plot_sensitivity_results(df: pd.DataFrame, output_dir: str):
 
 if __name__ == "__main__":
     # Example usage with multiple seeds
-    mc_simulations_range = [10]
-    random_seeds = [42]  # Multiple seeds for robustness
+    mc_simulations_range = [10, 25, 50, 75, 100, 150]
+    random_seeds = [42, 123, 456, 789, 1000]
+    
     output_dir = Path('./sens_output')
     output_dir.mkdir(parents=True, exist_ok=True)
     
