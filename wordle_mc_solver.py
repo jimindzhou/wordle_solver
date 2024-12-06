@@ -18,6 +18,7 @@ class WordleMCSolver(WordleSolverBase):
         self.max_depth = config.max_depth
         self.debug = False
         self.n_simulations = config.max_simulations
+        self.mc_process_num = config.mc_process_num
         
     def _load_words(self) -> List[str]:
         """Load word list from file specified in config"""
@@ -127,11 +128,13 @@ class WordleMCSolver(WordleSolverBase):
                         })
 
         else:
-            # Perform multiple MC simulations
-            mcruns = [self._generate_trajectory] * self.n_simulations
-            n_workers = min(multiprocessing.cpu_count(), 16)  # Optimal number of processes
+            # Perform multiple MC simulations using multiprocessing
+            n_workers = min(multiprocessing.cpu_count(), self.mc_process_num)  # Optimal number of processes
+            def run_trajectory(_):
+                return self._generate_trajectory()
+
             with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
-                results = list(executor.map(lambda _: self._generate_trajectory(), range(self.n_simulations)))
+                results = list(executor.map(run_trajectory, range(self.n_simulations)))
                 
             for trajectory, first_action in results:
                 score = self._compute_score(trajectory)

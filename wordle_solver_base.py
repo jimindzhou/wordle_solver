@@ -19,6 +19,7 @@ class SolverConfig:
         self.initial_guesses = config_dict.get('initial_guesses', None)
         self.true_solution = config_dict.get('true_solution', None)
         self.random_seed = config_dict.get('random_seed', 42)
+        self.mc_process_num = config_dict.get('mc_process_num', 12)
 
     @classmethod
     def from_yaml(cls, yaml_path: str, solver_name: str) -> 'SolverConfig':
