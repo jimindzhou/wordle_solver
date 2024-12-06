@@ -12,4 +12,5 @@ solvers:
     beta: 10000.0
     max_simulations: 20 # Maximum number of MC simulations to run at each depth
     n_games: 10 # Number of games to play
+    use_parallel: false
     word_file: valid-wordle-words.txt
