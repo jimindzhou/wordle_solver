@@ -1,6 +1,5 @@
 from typing import Dict, Any
 from tqdm import tqdm
-import numpy as np
 import logging
 from collections import Counter
 import argparse
@@ -10,11 +9,82 @@ from wordle_mc_solver import WordleMCSolver
 from wordle_random_solver import WordleRandomSolver
 import yaml
 from enum import Enum
-
+from pathlib import Path
+from datetime import datetime
+import json
+from copy import deepcopy
+import random 
+import numpy as np
 class SolverType(Enum):
     MCTS = "mcts" # Monte Carlo Tree Search
     RANDOM = "random" # Random guessing
 
+
+def clean_for_yaml(obj):
+    """Convert numpy types and arrays to native Python types for clean YAML output"""
+    if isinstance(obj, dict):
+        return {k: clean_for_yaml(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_for_yaml(item) for item in obj]
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, np.generic):
+        return obj.item()
+    else:
+        return obj
+    
+def save_results(results: Dict[str, Any], output_dir: str) -> None:
+    """
+    Save solver results in a structured format for easy comparison across different scenarios.
+    
+    Args:
+        results: Dictionary containing solver results and configuration
+        output_dir: Base directory for saving results
+    """
+    # Create output directory if it doesn't exist
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Extract key configuration parameters for folder structure
+    solver_type = results['solver_type']
+    config = results.get('config', {})
+    mc_runs = config.get('max_simulations', None)
+    initial_guesses = '_'.join(config.get('initial_guesses', ['default']))
+    
+    # Create timestamp for unique identification
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    if mc_runs is None:
+        scenario_path = output_path / solver_type / timestamp
+    else:
+        scenario_path = output_path / solver_type / f"mc_num__{mc_runs}" / f"init_{initial_guesses}" / timestamp
+    scenario_path.mkdir(parents=True, exist_ok=True)
+    results_file = scenario_path / "detailed_results.yaml"
+
+    clean_results = clean_for_yaml(deepcopy(results))
+    
+    # Save detailed results as YAML with clean formatting
+    results_file = scenario_path / "detailed_results.yaml"
+    with open(results_file, 'w') as f:
+        yaml.dump(clean_results, f, default_flow_style=False)
+    
+    summary = {
+        'solver_type': solver_type,
+        'max_simulations': mc_runs,
+        'initial_guesses': initial_guesses,
+        'timestamp': timestamp,
+        'success_rate': results['success_rate'],
+        'avg_attempts': results['avg_attempts'],
+        'std_attempts': results['std_attempts'],
+        'n_games': results['n_games'],
+        'guess_distribution': results['guess_distribution']
+    }
+    
+    summary_file = scenario_path / "summary.json"
+    with open(summary_file, 'w') as f:
+        json.dump(summary, f, indent=2)
+    
+    return results_file
 def create_solver(config: 'SolverConfig') -> WordleSolverBase:
     """Create appropriate solver based on configuration"""
     solver_type = SolverType(config.type)
@@ -33,6 +103,8 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
     all_attempts = []
     guess_distribution = Counter()
     game_histories = []
+    np.random.seed(solver.config.random_seed)
+    random.seed(solver.config.random_seed)
 
     games_pbar = tqdm(range(n_games), 
                      desc="Games Progress", 
@@ -55,8 +127,8 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
         for attempt in range(6):
             # Get guess based on whether it's first attempt or not
             if attempt == 0 and solver.config.initial_guesses:
-                guess = np.random.choice(solver.initial_guesses)
-                state_size = len(solver.initial_guesses)
+                guess = np.random.choice(solver.config.initial_guesses)
+                state_size = len(solver.config.initial_guesses)
             else:
                 guess = solver.get_next_guess()
                 state_size = len(solver.current_word_list)
@@ -122,6 +194,7 @@ def main():
     parser = argparse.ArgumentParser(description='Run Wordle solver with configuration')
     parser.add_argument('--config', type=str, required=True, help='Path to config YAML file')
     parser.add_argument('--solver', type=str, required=True, help='Name of solver to use from config')
+    parser.add_argument('--output', type=str, default='./output', help='Output directory for results')
     args = parser.parse_args()
     
     # Load solver configuration
@@ -142,9 +215,7 @@ def main():
         print(f"Average attempts: {results['avg_attempts']:.2f} ± {results['std_attempts']:.2f}")
         
         # Save results
-        results_file = f"results_{args.solver}.yaml"
-        with open(results_file, 'w') as f:
-            yaml.dump(results, f)
+        results_file = save_results(results, args.output)
         logger.info(f"Results saved to {results_file}")
         
     except Exception as e:

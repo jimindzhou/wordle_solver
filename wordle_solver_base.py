@@ -39,11 +39,8 @@ class WordleSolverBase:
         """Initialize solver with configuration"""
         self.config = config
         self.word_list = self._load_words()
-        if self.config.initial_guesses:
-            self.initial_word_list = self.config.initial_guesses.copy()
-        else:
-            # a random word from the word list
-            self.initial_word_list = self.word_list.copy()
+
+        self.initial_word_list = self.word_list.copy()
         self.current_word_list = self.word_list.copy()
         self.current_depth = 0
         self.trajectory_history = []  # history of action taken at each depth [during game]
