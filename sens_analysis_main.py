@@ -197,8 +197,3 @@ if __name__ == "__main__":
         random_seeds=random_seeds,
         output_dir='./sens_output/'
     )
-    
-    # Save results to CSV
-    csv_path = output_dir / 'sensitivity_results.csv'
-    results_df.to_csv(csv_path, index=False)
-    print(f"\nResults saved to: {csv_path}")
