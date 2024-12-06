@@ -33,7 +33,9 @@ def clean_for_yaml(obj):
     else:
         return obj
     
-def save_results(results: Dict[str, Any], output_dir: str) -> None:
+def save_results(results: Dict[str, Any], 
+                 config: 'SolverConfig',
+                   output_dir: str) -> None:
     """
     Save solver results in a structured format for easy comparison across different scenarios.
     
@@ -46,10 +48,12 @@ def save_results(results: Dict[str, Any], output_dir: str) -> None:
     output_path.mkdir(parents=True, exist_ok=True)
     
     # Extract key configuration parameters for folder structure
-    solver_type = results['solver_type']
-    config = results.get('config', {})
-    mc_runs = config.get('max_simulations', None)
-    initial_guesses = '_'.join(config.get('initial_guesses', ['default']))
+    solver_type = config.type
+    mc_runs = config.max_simulations
+    if config.initial_guesses:
+        initial_guesses = '_'.join(config.initial_guesses)
+    else:
+        initial_guesses = 'default'
     
     # Create timestamp for unique identification
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -215,7 +219,7 @@ def main():
         print(f"Average attempts: {results['avg_attempts']:.2f} ± {results['std_attempts']:.2f}")
         
         # Save results
-        results_file = save_results(results, args.output)
+        results_file = save_results(results, config, args.output)
         logger.info(f"Results saved to {results_file}")
         
     except Exception as e:
