@@ -26,12 +26,6 @@ class WordleMCSolver(WordleSolverBase):
         with open(word_file, 'r') as f:
             return [word.strip() for word in f.readlines()]
     
-    def reset(self):
-        """Reset solver state"""
-        self.current_word_list = self.initial_word_list.copy()
-        self.current_depth = 0
-        self.trajectory_history = []
-    
     def _compute_score(self, trajectory: List[List[str]]) -> float:
         """
         Compute the score for a given trajectory.

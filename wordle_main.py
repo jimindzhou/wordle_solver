@@ -15,6 +15,7 @@ import json
 from copy import deepcopy
 import random 
 import numpy as np
+
 class SolverType(Enum):
     MCTS = "mcts" # Monte Carlo Tree Search
     RANDOM = "random" # Random guessing
@@ -58,10 +59,13 @@ def save_results(results: Dict[str, Any],
     # Create timestamp for unique identification
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     
-    if mc_runs is None:
+    if solver_type is SolverType.RANDOM:
         scenario_path = output_path / solver_type / timestamp
-    else:
+    elif solver_type is SolverType.MCTS:
         scenario_path = output_path / solver_type / f"mc_num__{mc_runs}" / f"init_{initial_guesses}" / timestamp
+    else:
+        raise ValueError(f"Unknown solver type: {solver_type}")
+    
     scenario_path.mkdir(parents=True, exist_ok=True)
     results_file = scenario_path / "detailed_results.yaml"
 
@@ -116,7 +120,13 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
                      leave=True)
     
     for game_num in games_pbar:
-        solver.reset()
+        # Generate new seed for each game to ensure different game sequences
+        # but still reproducible
+        game_seed = solver.config.random_seed + game_num
+        np.random.seed(game_seed)
+        random.seed(game_seed)
+
+        solver.reset(game_seed)
         solution = solver.true_solution # either one from today's wordle game or random
         game_record = {
             'random_seed': solver.config.random_seed,
