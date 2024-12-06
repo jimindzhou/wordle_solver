@@ -7,7 +7,7 @@ import random
 from pathlib import Path
 from tqdm import tqdm
 import concurrent.futures
-
+import time
 class WordleMCSolver(WordleSolverBase):
     """Monte Carlo Tree Search solver for Wordle"""
     def __init__(self, config: 'SolverConfig'):
@@ -15,7 +15,7 @@ class WordleMCSolver(WordleSolverBase):
         self.alpha = config.alpha
         self.beta = config.beta
         self.max_depth = config.max_depth
-        self.debug = False
+        self.debug = True
         self.n_simulations = config.max_simulations
         self.num_workers = config.mc_process_num
 
@@ -107,7 +107,8 @@ class WordleMCSolver(WordleSolverBase):
                        disable=not self.debug,  # Disable tqdm when debug is False
                        leave=False) if self.debug else range(self.n_simulations)
         
-        if len(self.current_word_list) < 500:
+        start_time = time.time()
+        if self.num_workers <= 1:
         # Perform multiple MC simulations 
             for _ in iterator:
                 trajectory, first_action = self._generate_trajectory()
@@ -137,6 +138,10 @@ class WordleMCSolver(WordleSolverBase):
                 score = self._compute_score(trajectory)
                 action_scores[first_action].append(score)
         
+        if self.debug:
+            elapsed_time = time.time() - start_time
+            print(f"{self.n_simulations} MC processing completed in {elapsed_time:.2f} seconds with {workers} workers")
+            
         # Calculate average scores and return best guess
         avg_scores = {
             action: np.mean(scores) for action, scores in action_scores.items()

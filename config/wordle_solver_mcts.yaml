@@ -15,7 +15,7 @@ solvers:
     #word_file: wordle-answers-alphabetical.txt
     word_file: valid-wordle-words.txt
     random_seed: 42
-    mc_process_num: 8
+    mc_process_num: 1
     #true_solution: endow
   
   random_guesser:
