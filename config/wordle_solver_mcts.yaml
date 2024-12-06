@@ -10,7 +10,7 @@ solvers:
       - carte
     alpha: 1000.0
     beta: 10000.0
-    max_simulations: 50 # Maximum number of MC simulations to run at each depth
+    max_simulations: 12 # Maximum number of MC simulations to run at each depth
     n_games: 100 # Number of games to play
     #word_file: wordle-answers-alphabetical.txt
     word_file: valid-wordle-words.txt

@@ -7,7 +7,6 @@ import random
 from pathlib import Path
 from tqdm import tqdm
 import concurrent.futures
-import multiprocessing
 
 class WordleMCSolver(WordleSolverBase):
     """Monte Carlo Tree Search solver for Wordle"""
@@ -18,8 +17,8 @@ class WordleMCSolver(WordleSolverBase):
         self.max_depth = config.max_depth
         self.debug = False
         self.n_simulations = config.max_simulations
-        self.mc_process_num = config.mc_process_num
-        
+        self.num_workers = config.mc_process_num
+
     def _load_words(self) -> List[str]:
         """Load word list from file specified in config"""
         word_file = Path(self.config.word_file)
@@ -101,7 +100,6 @@ class WordleMCSolver(WordleSolverBase):
         Run multiple Monte Carlo simulations to determine the best next guess.
         """
         action_scores = defaultdict(list)
-        
         desc = f"Depth {self.current_depth + 1} MC sims"
         # Use regular range if debug is False
         iterator = tqdm(range(self.n_simulations), 
@@ -128,13 +126,12 @@ class WordleMCSolver(WordleSolverBase):
                         })
 
         else:
-            # Perform multiple MC simulations using multiprocessing
-            n_workers = min(multiprocessing.cpu_count(), self.mc_process_num)  # Optimal number of processes
-            def run_trajectory(_):
-                return self._generate_trajectory()
-
-            with concurrent.futures.ProcessPoolExecutor(max_workers=n_workers) as executor:
-                results = list(executor.map(run_trajectory, range(self.n_simulations)))
+            # Perform multiple MC simulations
+            mcruns = [self._generate_trajectory] * self.n_simulations
+            workers = min(self.n_simulations, self.num_workers)
+            with concurrent.futures.ProcessPoolExecutor(max_workers = workers) as executor:
+                futures = [executor.submit(func) for func in mcruns]  
+                results = [future.result() for future in futures]
                 
             for trajectory, first_action in results:
                 score = self._compute_score(trajectory)
