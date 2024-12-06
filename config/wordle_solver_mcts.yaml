@@ -13,14 +13,12 @@ solvers:
     max_simulations: 20 # Maximum number of MC simulations to run at each depth
     n_games: 10 # Number of games to play
     word_file: valid-wordle-words.txt
+    random_seed: 42
+    #true_solution: endow
   
   random_guesser:
     type: random
-    initial_guesses: 
-      - slate
-      - crane
-      - slant
-      - trace
-      - crate
-      - carte
     word_file: valid-wordle-words.txt
+    n_games: 100 # Number of games to play
+    random_seed: 42
+    #true_solution: endow

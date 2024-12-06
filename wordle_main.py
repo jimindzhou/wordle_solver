@@ -5,8 +5,26 @@ import logging
 from collections import Counter
 import argparse
 import matplotlib.pyplot as plt
-from wordle_mc_solver import WordleMCSolver, SolverConfig
+from wordle_solver_base import WordleSolverBase, SolverConfig
+from wordle_mc_solver import WordleMCSolver
+from wordle_random_solver import WordleRandomSolver
 import yaml
+from enum import Enum
+
+class SolverType(Enum):
+    MCTS = "mcts" # Monte Carlo Tree Search
+    RANDOM = "random" # Random guessing
+
+def create_solver(config: 'SolverConfig') -> WordleSolverBase:
+    """Create appropriate solver based on configuration"""
+    solver_type = SolverType(config.type)
+    
+    if solver_type == SolverType.MCTS:
+        return WordleMCSolver( config )
+    elif solver_type == SolverType.RANDOM:
+        return WordleRandomSolver( config )
+    else:
+        raise ValueError(f"Unknown solver type: {solver_type}")
 
 def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
     """Run evaluation of solver according to config"""
@@ -23,8 +41,9 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
     
     for game_num in games_pbar:
         solver.reset()
-        solution = np.random.choice(solver.word_list)
+        solution = solver.true_solution # either one from today's wordle game or random
         game_record = {
+            'random_seed': solver.config.random_seed,
             'solution': solution,
             'guesses': [],
             'states': []
@@ -36,8 +55,8 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
         for attempt in range(6):
             # Get guess based on whether it's first attempt or not
             if attempt == 0 and solver.config.initial_guesses:
-                guess = np.random.choice(solver.config.initial_guesses)
-                state_size = len(solver.config.initial_guesses)
+                guess = np.random.choice(solver.initial_guesses)
+                state_size = len(solver.initial_guesses)
             else:
                 guess = solver.get_next_guess()
                 state_size = len(solver.current_word_list)
@@ -82,6 +101,7 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
         print("\n" + "="*50)
     
     return {
+        'solver_type': solver.config.type,
         'n_games': n_games,
         'success_rate': (success_count / n_games) * 100,
         'avg_attempts': np.mean(all_attempts),
@@ -105,9 +125,10 @@ def main():
     args = parser.parse_args()
     
     # Load solver configuration
-    config = SolverConfig.from_yaml(args.config, args.solver)
+    config = SolverConfig.from_yaml(args.config, 
+                                    args.solver)
     logger.info(f"Initializing {args.solver} solver")
-    solver = WordleMCSolver(config)
+    solver = create_solver(config) # WordleMCSolver or WordleRandomSolver
     
     try:
         logger.info(f"Starting evaluation with {config.n_games} games")
@@ -115,6 +136,7 @@ def main():
         
         # Print results
         print("\nEvaluation Results:")
+        print(f"\nSolver: {results['solver_type']}")
         print(f"Number of games: {results['n_games']}")
         print(f"Success rate: {results['success_rate']:.1f}%")
         print(f"Average attempts: {results['avg_attempts']:.2f} ± {results['std_attempts']:.2f}")
