@@ -11,7 +11,7 @@ solvers:
     alpha: 1000.0
     beta: 10000.0
     max_simulations: 40 # Maximum number of MC simulations to run at each depth
-    n_games: 1 # Number of games to play
+    n_games: 100 # Number of games to play
     word_file: wordle-answers-alphabetical.txt
     random_seed: 42
     #true_solution: endow
