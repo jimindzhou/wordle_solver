@@ -1,12 +1,108 @@
 from typing import Dict, Any
 from tqdm import tqdm
-import numpy as np
 import logging
 from collections import Counter
 import argparse
 import matplotlib.pyplot as plt
-from wordle_mc_solver import WordleMCSolver, SolverConfig
+from wordle_solver_base import WordleSolverBase, SolverConfig
+from wordle_mc_solver import WordleMCSolver
+from wordle_random_solver import WordleRandomSolver
 import yaml
+from enum import Enum
+from pathlib import Path
+from datetime import datetime
+import json
+from copy import deepcopy
+import random 
+import numpy as np
+
+class SolverType(Enum):
+    MCTS = "mcts" # Monte Carlo Tree Search
+    RANDOM = "random" # Random guessing
+
+
+def clean_for_yaml(obj):
+    """Convert numpy types and arrays to native Python types for clean YAML output"""
+    if isinstance(obj, dict):
+        return {k: clean_for_yaml(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_for_yaml(item) for item in obj]
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, np.generic):
+        return obj.item()
+    else:
+        return obj
+    
+def save_results(results: Dict[str, Any], 
+                 config: 'SolverConfig',
+                   output_dir: str) -> None:
+    """
+    Save solver results in a structured format for easy comparison across different scenarios.
+    
+    Args:
+        results: Dictionary containing solver results and configuration
+        output_dir: Base directory for saving results
+    """
+    # Create output directory if it doesn't exist
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Extract key configuration parameters for folder structure
+    solver_type = config.type
+    mc_runs = config.max_simulations
+    if config.initial_guesses:
+        initial_guesses = '_'.join(config.initial_guesses)
+    else:
+        initial_guesses = 'default'
+    
+    # Create timestamp for unique identification
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    if solver_type is SolverType.RANDOM:
+        scenario_path = output_path / solver_type / timestamp
+    elif solver_type is SolverType.MCTS:
+        scenario_path = output_path / solver_type / f"mc_num__{mc_runs}" / f"init_{initial_guesses}" / timestamp
+    else:
+        raise ValueError(f"Unknown solver type: {solver_type}")
+    
+    scenario_path.mkdir(parents=True, exist_ok=True)
+    results_file = scenario_path / "detailed_results.yaml"
+
+    clean_results = clean_for_yaml(deepcopy(results))
+    
+    # Save detailed results as YAML with clean formatting
+    results_file = scenario_path / "detailed_results.yaml"
+    with open(results_file, 'w') as f:
+        yaml.dump(clean_results, f, default_flow_style=False)
+    
+    summary = {
+        'solver_type': solver_type,
+        'max_simulations': mc_runs,
+        'initial_guesses': initial_guesses,
+        'timestamp': timestamp,
+        'success_rate': results['success_rate'],
+        'avg_attempts': results['avg_attempts'],
+        'std_attempts': results['std_attempts'],
+        'n_games': results['n_games'],
+        'guess_distribution': results['guess_distribution']
+    }
+    
+    summary_file = scenario_path / "summary.json"
+    with open(summary_file, 'w') as f:
+        json.dump(summary, f, indent=2)
+    
+    return results_file
+def create_solver(config: 'SolverConfig') -> WordleSolverBase:
+    """Create appropriate solver based on configuration"""
+    solver_type = SolverType(config.type)
+    
+    if solver_type == SolverType.MCTS:
+        return WordleMCSolver( config )
+    elif solver_type == SolverType.RANDOM:
+        return WordleRandomSolver( config )
+    else:
+        raise ValueError(f"Unknown solver type: {solver_type}")
 
 def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
     """Run evaluation of solver according to config"""
@@ -15,6 +111,8 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
     all_attempts = []
     guess_distribution = Counter()
     game_histories = []
+    np.random.seed(solver.config.random_seed)
+    random.seed(solver.config.random_seed)
 
     games_pbar = tqdm(range(n_games), 
                      desc="Games Progress", 
@@ -22,9 +120,16 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
                      leave=True)
     
     for game_num in games_pbar:
-        solver.reset()
-        solution = np.random.choice(solver.word_list)
+        # Generate new seed for each game to ensure different game sequences
+        # but still reproducible
+        game_seed = solver.config.random_seed + game_num
+        np.random.seed(game_seed)
+        random.seed(game_seed)
+
+        solver.reset(game_seed)
+        solution = solver.true_solution # either one from today's wordle game or random
         game_record = {
+            'random_seed': solver.config.random_seed,
             'solution': solution,
             'guesses': [],
             'states': []
@@ -82,6 +187,7 @@ def evaluate_solver(solver: WordleMCSolver) -> Dict[str, Any]:
         print("\n" + "="*50)
     
     return {
+        'solver_type': solver.config.type,
         'n_games': n_games,
         'success_rate': (success_count / n_games) * 100,
         'avg_attempts': np.mean(all_attempts),
@@ -102,12 +208,14 @@ def main():
     parser = argparse.ArgumentParser(description='Run Wordle solver with configuration')
     parser.add_argument('--config', type=str, required=True, help='Path to config YAML file')
     parser.add_argument('--solver', type=str, required=True, help='Name of solver to use from config')
+    parser.add_argument('--output', type=str, default='./output', help='Output directory for results')
     args = parser.parse_args()
     
     # Load solver configuration
-    config = SolverConfig.from_yaml(args.config, args.solver)
+    config = SolverConfig.from_yaml(args.config, 
+                                    args.solver)
     logger.info(f"Initializing {args.solver} solver")
-    solver = WordleMCSolver(config)
+    solver = create_solver(config) # WordleMCSolver or WordleRandomSolver
     
     try:
         logger.info(f"Starting evaluation with {config.n_games} games")
@@ -115,14 +223,13 @@ def main():
         
         # Print results
         print("\nEvaluation Results:")
+        print(f"\nSolver: {results['solver_type']}")
         print(f"Number of games: {results['n_games']}")
         print(f"Success rate: {results['success_rate']:.1f}%")
         print(f"Average attempts: {results['avg_attempts']:.2f} ± {results['std_attempts']:.2f}")
         
         # Save results
-        results_file = f"results_{args.solver}.yaml"
-        with open(results_file, 'w') as f:
-            yaml.dump(results, f)
+        results_file = save_results(results, config, args.output)
         logger.info(f"Results saved to {results_file}")
         
     except Exception as e:
