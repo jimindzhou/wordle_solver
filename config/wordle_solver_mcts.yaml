@@ -10,18 +10,18 @@ solvers:
       - carte
     alpha: 1000.0
     beta: 10000.0
-    max_simulations: 100 # Maximum number of MC simulations to run at each depth
-    n_games: 100 # Number of games to play
-    #word_file: wordle-answers-alphabetical.txt
-    word_file: valid-wordle-words.txt
+    max_simulations: 50 # Maximum number of MC simulations to run at each depth
+    n_games: 1 # Number of games to play
+    word_file: wordle-answers-alphabetical.txt
+    #word_file: valid-wordle-words.txt
     random_seed: 42
-    mc_process_num: 1
-    #true_solution: endow
+    mc_process_num: 64
+    true_solution: endow
 
   random_guesser:
     type: random
-    #word_file: wordle-answers-alphabetical.txt
-    word_file: valid-wordle-words.txt
-    n_games: 100 # Number of games to play
+    word_file: wordle-answers-alphabetical.txt
+    #word_file: valid-wordle-words.txt
+    n_games: 1 # Number of games to play
     random_seed: 42
-    #true_solution: endow
+    true_solution: endow

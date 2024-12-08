@@ -15,7 +15,7 @@ class WordleMCSolver(WordleSolverBase):
         self.alpha = config.alpha
         self.beta = config.beta
         self.max_depth = config.max_depth
-        self.debug = True
+        self.debug = False
         self.n_simulations = config.max_simulations
         self.num_workers = config.mc_process_num
 
