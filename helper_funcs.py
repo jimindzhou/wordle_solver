@@ -5,6 +5,9 @@ import random
 from collections import defaultdict, Counter 
 from typing import List, Dict, Any, Tuple
 import pandas as pd
+import multiprocessing
+import concurrent.futures 
+import time
 
 def print_colored_square(color):
     colors = {
@@ -222,6 +225,59 @@ def create_dict_list(word_list):
         stat_list.append([no_groups, max_length])
         tran_list.append(tran_dict)
         prob_list.append(no_groups / max_length )
+
+    total_prob = sum(prob_list)
+    prob_list = [x / total_prob for x in prob_list]
+
+    return dict_list, stat_list, tran_list, prob_list
+
+def create_dict_p(input):
+    word_list = input[0]
+    guess = input[1]
+
+    grp_dict = {}
+    for sol in word_list:
+        group = word_comparison(sol, guess)
+        group_key = tuple(group)
+        if group_key not in grp_dict:
+            grp_dict[group_key] = []
+        grp_dict[group_key].append(sol)
+    
+    tran_dict = {}
+    nword = len(word_list)
+    for key in grp_dict.keys():
+        tran_dict[key] = []
+        tran_dict[key].append(len(grp_dict[key]) / nword)
+
+    no_groups, max_length = get_dict_stats(grp_dict)
+    grp_dict[('green', 'green', 'green', 'green', 'green')] = []
+
+    return grp_dict, [no_groups, max_length], tran_dict, no_groups / max_length
+
+def create_dict_list_p(word_list):    
+    dict_list = []
+    stat_list = []
+    tran_list = []
+    prob_list = []
+
+    inputs = []
+    for guess in word_list:
+        inputs.append((word_list, guess))
+
+    with concurrent.futures.ProcessPoolExecutor(max_workers = 8) as executor:
+        results = list(executor.map(create_dict_p, inputs))
+        # # Display the number of active processes              
+        # while any(future.running() for future in futures):                    
+        #     active_processes = multiprocessing.active_children()
+        #     print(f"Active processes: {len(active_processes)}")
+        #     time.sleep(2)  # Check every 2s
+        # results = [future.result() for future in futures]
+
+    for result in results:
+        dict_list.append(result[0])
+        stat_list.append(result[1])
+        tran_list.append(result[2])
+        prob_list.append(result[3])
 
     total_prob = sum(prob_list)
     prob_list = [x / total_prob for x in prob_list]
